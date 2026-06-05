@@ -7,6 +7,7 @@ export default function Home() {
     <SafeAreaView>
       <View>
         <Text>Home</Text>
+        {/* <Link href="../about">Go to About</Link> */}
       </View>
     </SafeAreaView>
   );

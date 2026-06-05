@@ -30,6 +30,7 @@
 
 import { Ionicons } from "@expo/vector-icons";
 import { Tabs } from "expo-router";
+import { View } from "react-native";
 export default function TabLayout() {
   return (
     <Tabs
@@ -37,15 +38,7 @@ export default function TabLayout() {
         headerShown: false, // no weird header
       }}
     >
-      <Tabs.Screen
-        name="index"
-        options={{
-          title: "Home",
-          tabBarIcon: ({ color, size }) => (
-            <Ionicons name="home" size={size} color={color} />
-          ),
-        }}
-      />
+
       <Tabs.Screen
         name="search"
         options={{
@@ -55,13 +48,29 @@ export default function TabLayout() {
           ),
         }}
       />
-      <Tabs.Screen
+      {/* <Tabs.Screen
         name="saved"
         options={{
           title: "Saved",
           tabBarIcon: ({ color, size }) => (
             <Ionicons name="heart" size={size} color={color} />
           ),
+        }}
+      /> */}
+      <Tabs.Screen
+        name="index"
+        options={{
+          title: "Home",
+          tabBarIcon: ({ color, size }) => {
+            return (
+              <View
+                className="border-2 border-black border-solid w-[4rem]
+                flex items-center justify-center h-[4rem] rounded-full bg-black mb-10 "
+              >
+                <Ionicons name="home" size={size} color={"white"} />
+              </View>
+            )
+          },
         }}
       />
       <Tabs.Screen

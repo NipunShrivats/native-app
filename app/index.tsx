@@ -1,5 +1,11 @@
 import { Redirect } from "expo-router";
+import { SafeAreaView } from "react-native-safe-area-context";
 import "../global.css";
 export default function Index() {
-  return <Redirect href="/(root)/(tabs)" />;
+  return (
+    <SafeAreaView>
+      {/* <Redirect href="/(tabs)" /> */}
+      <Redirect href="/(drawer)" />
+    </SafeAreaView>
+  )
 }
